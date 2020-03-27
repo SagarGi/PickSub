@@ -57,6 +57,47 @@ public class PickSub
         // }
     }
 
+    public void finalState()
+    {
+        firstState();
+        reverseSubjects();
+
+        //final stage
+        subjectComplexityPoints = new int[n];
+        for(int i = 0; i < n; i++)
+        {
+            subjectComplexityPoints[i] = 0;
+        }
+
+        int m = n-1;
+        String ans;
+        for(int i = 0; i < n; i++)
+        { 
+            for(int j = 0; j < m; j++)
+            {
+                
+                System.out.println("\nWhich is complex between " + reverseSub[i] + " and " + subArray[j] + " ?");
+                ans = scanner.next();
+                if(ans.equals(subArray[j]))
+                {
+                    subjectComplexityPoints[j]++;
+                }
+                else
+                {
+                    subjectComplexityPoints[n-1-i]++;
+                }
+            }
+            m = m -1;
+        }
+
+        System.out.println("The complexity points for the given subject for you is: ");
+        for(int i = 0; i < n; i++)
+        {
+            System.out.println(subArray[i] + " = " + subjectComplexityPoints[i]);
+        }
+
+    }
+
 }
 
 class PickSubDemo
@@ -64,7 +105,6 @@ class PickSubDemo
     public static void main(String args[])
     {
         PickSub ps = new PickSub();
-       ps.firstState();
-       ps.reverseSubjects();
+        ps.finalState();
     }
 }
