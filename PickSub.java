@@ -37,6 +37,26 @@ public class PickSub
         System.out.print("\n");
     }
 
+    public void reverseSubjects()
+    {
+        // this is the second state where you compare each and every subjects with each other based on their complexity;
+
+        //reversing the array
+        reverseSub = new String[n];
+
+        for(int i = 0; i < n; i++)
+        {
+            reverseSub[i] = subArray[n-1-i];
+        }
+
+        // System.out.println("\nYour reverserd subjects are :");
+
+        // for(String s: reverseSub)
+        // {
+        //     System.out.print(s + "\t");
+        // }
+    }
+
 }
 
 class PickSubDemo
@@ -45,5 +65,6 @@ class PickSubDemo
     {
         PickSub ps = new PickSub();
        ps.firstState();
+       ps.reverseSubjects();
     }
 }
