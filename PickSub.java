@@ -20,6 +20,14 @@ public class PickSub
         System.out.println("Also Enter How many Subjects you have :");
         n = scanner.nextInt();
 
+        // the subjects is supposed to be more than 2.
+        while(n < 2)
+        {
+            System.out.println("No of subjects should be more than 2!!");
+            System.out.println("Also Enter How many Subjects you have :");
+            n = scanner.nextInt();
+        }
+
         System.out.println("Enter your all " + n + " subjects name :");
 
         subArray = new String[n];
