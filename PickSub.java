@@ -90,7 +90,6 @@ public class PickSub
                 
                 while(!ans.equals(reverseSub[i]) && !ans.equals(subArray[j]))
                 {
-                    System.out.println("Ture");
                     System.out.println("Subject did not match. Please enter right subject!!");
                     System.out.println("\nWhich is complex between " + reverseSub[i] + " and " + subArray[j] + " ?");
                     ans = scanner.next();
@@ -108,12 +107,14 @@ public class PickSub
             m = m -1;
         }
 
-        System.out.println("The complexity points for the given subject for you is: ");
+        System.out.println("\nThe complexity points for the given subject for you is: \n");
         for(int i = 0; i < n; i++)
         {
-            System.out.println(subArray[i] + " = " + subjectComplexityPoints[i]);
+            System.out.println(subArray[i] + " = " + subjectComplexityPoints[i] + "\n");
         }
+        System.out.print("\n\n");
 
+        System.out.println("Hello " + name +  ", Please Pick up the subject to read which has highest complexity point and acourdingly!! \nGood Luck!!");
     }
 
 }
