@@ -86,6 +86,16 @@ public class PickSub
                 
                 System.out.println("\nWhich is complex between " + reverseSub[i] + " and " + subArray[j] + " ?");
                 ans = scanner.next();
+                // check if the user enter the correct subject or not
+                
+                while(!ans.equals(reverseSub[i]) && !ans.equals(subArray[j]))
+                {
+                    System.out.println("Ture");
+                    System.out.println("Subject did not match. Please enter right subject!!");
+                    System.out.println("\nWhich is complex between " + reverseSub[i] + " and " + subArray[j] + " ?");
+                    ans = scanner.next();
+                }
+
                 if(ans.equals(subArray[j]))
                 {
                     subjectComplexityPoints[j]++;
